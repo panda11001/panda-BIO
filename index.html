@@ -13,9 +13,28 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
-            background: url('https://i.ibb.co/cD6vN4B/pinterestdownloader-com-1730284456-204772.jpg') no-repeat center center fixed; /* Background image */
+            overflow: hidden; /* Prevent scroll bars */
+        }
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.ibb.co/cD6vN4B/pinterestdownloader-com-1730284456-204772.jpg') no-repeat center center; /* Background image */
             background-size: cover; /* Ensures the image covers the entire background */
-            animation: backgroundAnimation 10s infinite alternate; /* Animation for background */
+            animation: moveBackground 10s linear infinite; /* Animation for background */
+            filter: blur(8px); /* Blur effect */
+            z-index: -1; /* Position behind other elements */
         }
         .container {
             max-width: 400px;
@@ -105,20 +124,22 @@
             50% { text-shadow: 0 0 20px silver, 0 0 30px silver; }
             100% { text-shadow: 0 0 10px silver, 0 0 20px silver; }
         }
-        @keyframes backgroundAnimation {
+        @keyframes moveBackground {
             0% {
-                filter: blur(0px); /* No blur */
+                background-position: 0% 0%;
             }
             50% {
-                filter: blur(8px); /* Blur effect */
+                background-position: 100% 100%;
             }
             100% {
-                filter: blur(0px); /* No blur */
+                background-position: 0% 0%;
             }
         }
     </style>
 </head>
 <body>
+
+    <div class="background"></div> <!-- Background with blur and animation -->
 
     <div class="container">
         <div class="title">PANDA MODZ  𝗕𝗜𝗢</div>
@@ -153,9 +174,4 @@
                 <li><a href="https://whatsapp.com/channel/0029Vamgw0kKQuJT7pCsNr0F">𝙈𝙔 𝘾𝙃𝘼𝙉𝙉𝙀𝙇</a></li>
                 <li><a href="https://whatsapp.com/channel/0029VagEOTtHwXbDdrr7Eq3k">𝐀𝙇𝗘𝙓 ❜ 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 - </a></li>
                 <li><a href=""> 𝘾𝙊𝙈𝙈𝙄𝙉𝙂 𝙎𝙊𝙊𝙉...</a></li>
-            </ul>
-        </div>
-    </div>
-
-</body>
-</html>
+            </ul

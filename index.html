@@ -13,8 +13,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
-            background: url('https://i.ibb.co/cD6vN4B/pinterestdownloader-com-1730284456-204772.jpg') no-repeat center center fixed; /* Background image added */
+            background: url('https://i.ibb.co/cD6vN4B/pinterestdownloader-com-1730284456-204772.jpg') no-repeat center center fixed; /* Background image */
             background-size: cover; /* Ensures the image covers the entire background */
+            animation: backgroundAnimation 10s infinite alternate; /* Animation for background */
         }
         .container {
             max-width: 400px;
@@ -25,6 +26,8 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             text-align: center;
             animation: fadeIn 1s ease-in-out;
+            position: relative; /* Ensure the container is positioned correctly */
+            z-index: 1; /* Place above the blurred background */
         }
         h1, h2, p {
             color: #fff;
@@ -102,6 +105,17 @@
             50% { text-shadow: 0 0 20px silver, 0 0 30px silver; }
             100% { text-shadow: 0 0 10px silver, 0 0 20px silver; }
         }
+        @keyframes backgroundAnimation {
+            0% {
+                filter: blur(0px); /* No blur */
+            }
+            50% {
+                filter: blur(8px); /* Blur effect */
+            }
+            100% {
+                filter: blur(0px); /* No blur */
+            }
+        }
     </style>
 </head>
 <body>
@@ -116,7 +130,7 @@
         <div class="inline-details">
             <div class="place">𝗖𝗢𝗨𝗡𝗧𝗥𝗬 : Sri lanka</div>
             <div>𝗔𝗚𝗘 → ━━</div>
-            <div class="best-friend"><a href="https://wa.me/94756857260?/">𝗕𝗘𝗦𝗧 𝗙𝗥𝗜𝗘𝗡𝗗 → 𝐌ʀ - 𝐀𝙇𝗘𝙓 - 𝙄𝘿 ᴾᴿᴼᴳᴿᴬᴹᴹᴱᴿ </> 🇱🇰</a></div>
+            <div class="best-friend"><a href="https://wa.me/94756857260?/">𝗕𝗘𝗦𝗧 𝗙𝗥𝗜𝗘𝗡𝗗 → 𝐌ʳ - 𝐀𝙇𝗘𝙓 - 𝙄𝘿 ᴾᴿᴼᴳᴿᴬᴹᴹᴱᴿ </> 🇱🇰</a></div>
         </div>
 
         <div class="section">
